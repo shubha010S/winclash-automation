@@ -7,7 +7,7 @@ def create_account():
     data = request.get_json()
     username = data.get("username")
     password = data.get("password")
-    
+
     # Dummy response for testing
     return jsonify({
         "status": "success",
