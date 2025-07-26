@@ -8,12 +8,12 @@ def create_account():
     username = data.get("username")
     password = data.get("password")
 
-    # Dummy response for testing
+    # Dummy response for now
     return jsonify({
         "status": "success",
         "username": username,
         "password": password,
-        "message": "Account creation simulation successful"
+        "message": "Account creation simulator"
     })
 
 if __name__ == '__main__':
