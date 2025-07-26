@@ -1,6 +1,11 @@
+# app.py
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return jsonify({"message": "✅ Winclash Automation API is Running!"})
 
 @app.route('/create-account', methods=['POST'])
 def create_account():
@@ -8,7 +13,6 @@ def create_account():
     username = data.get("username")
     password = data.get("password")
 
-    # Dummy response for now
     return jsonify({
         "status": "success",
         "username": username,
@@ -17,4 +21,4 @@ def create_account():
     })
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=10000)
